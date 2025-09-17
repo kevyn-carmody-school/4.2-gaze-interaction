@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+        <!-- THIS IS WHERE YOUR CODE WILL GO -->
+        <a-camera><a-cursor fuse="true" fuse-timeout="1000"></a-cursor></a-camera>
+        <a-sky color="#6395EE"></a-sky>
+        <!--<a-light color="white" position="0 0 0" type="point"></a-light>-->
+        <a-plane color="darkolivegreen" width="100" height="100" rotation="-90 0 0"></a-plane>
+        
+        <a-box src="https://codehs.com/uploads/4689a00235254961b1a8eb794846187c" position="5 2.5 -5" width="1" height="3" depth="1"
+        animation="
+        property: color;
+        from: #FFFFFF;
+        to: #ff6600;
+        startEvents: click;
+        "
+        animation__2="
+        property: scale;
+        from: 3 10 -6;
+        to: 2 6 78;
+        startEvents: click;
+        "
+        animation__3="
+        property: position;
+        from: 5 2.5 -5;
+        to: 5 999 -5;
+        startEvents:click;
+        delay: 1000;
+        "
+        animation__4="
+        property: rotation;
+        from: 0 0 0;
+        to: 14478000 814000 1897000;
+        startEvents: click;
+        dur: 5000;
+        "></a-box>
+        
+        <a-box position="0 0 -50" src="https://codehs.com/uploads/9717aab259a48bb31037637a071f76a7" width="100" height="100"
+        animation="
+        property: rotation;
+        from: 0 0 0;
+        to: 0 0 90;
+        dir: alternate;
+        loop: true;
+        easing: linear;
+        
+        "
+        animation__2="
+        property: rotation;
+        from: 0 0 0;
+        to: -999 -999 0;
+        startEvents: click;
+        "
+        ></a-box>
+        
+        <a-cone src="https://codehs.com/uploads/24f5ffbe84fdeaf53ffa1a500a16e59b" position="-10 -4.5 -10" radius-bottom="0.1" radius-top="10" height="10"
+        animation="
+        property: rotation;
+        from: 0 0 0;
+        to: 0 360 0;
+        loop: true;
+        easing: linear;
+        stopEvents: click;
+        dur: 10000;
+        "
+        animation__2="
+        property: rotation;
+        from: 0 0 0;
+        to: 0 360 0;
+        loop: true;
+        dur: 100;
+        startEvents: click;
+        "
+        animation__3="
+        property: position;
+        from: -10 -4.5 -10;
+        to: -10 -30 -10;
+        easing: easeInElastic;
+        startEvents: click;
+        "
+        ></a-cone>
+        <a-torus color="#7e4925" position="-10 0 -10" arc="360" radius="10" radius-tubular=".3" rotation="-90 0 0"
+        animation="
+        property: scale;
+        from: 1 1 1;
+        to: 2 2 2;
+        easing: easeInElastic;
+        startEvents: click;
+        "
+        ></a-torus>
+        </a-scene>
+    </body>
+</html>
